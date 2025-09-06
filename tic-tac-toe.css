@@ -1,0 +1,77 @@
+body.ttt-bg {
+  background: #161f27;
+  margin: 0;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+.ttt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.ttt-cell {
+  background: #253245;
+  border: none;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  color: #f7c948; /* X color */
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ttt-cell.o {
+  color: #45e6ca; /* O color */
+}
+
+.ttt-cell:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ttt-cell.selected {
+  background: #3a4a5c;
+  border: 2px solid #f7c948;
+  transform: scale(1.05);
+}
+
+.ttt-btn {
+  background: #253245;
+  color: #45e6ca;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 12px 10px 0 10px;
+  transition: background 0.2s;
+}
+
+.ttt-btn:hover {
+  background: #1c2533;
+}
+
+.ttt-message {
+  color: #f7c948;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.ttt-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

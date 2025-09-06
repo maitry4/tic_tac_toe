@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe - Start</title>
+  <link rel="stylesheet" href="tic-tac-toe.css">
+</head>
+<body class="ttt-bg">
+  <div class="ttt-container" id="start-container">
+    <h1 style="color: #f7c948; margin-bottom: 30px; font-size: 2.5rem;">Tic Tac Toe</h1>
+    <p style="color: #45e6ca; margin-bottom: 30px; font-size: 1.2rem;">Classic 3x3 Grid Game</p>
+    <button class="ttt-btn" id="start-btn">Start Game</button>
+  </div>
+
+  <script>
+    document.getElementById('start-btn').addEventListener('click', () => {
+      window.location.href = 'game.html';
+    });
+  </script>
+
+</body>
+</html>

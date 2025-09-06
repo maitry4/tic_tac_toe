@@ -1,0 +1,38 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tic Tac Toe - Result</title>
+  <link rel="stylesheet" href="tic-tac-toe.css" />
+</head>
+<body class="ttt-bg">
+  <div class="ttt-container" id="result-container">
+    <h1 style="color: #f7c948; margin-bottom: 30px; font-size: 2.5rem;">Game Over!</h1>
+    <div id="result-message" class="ttt-message"></div>
+    <div style="margin-top: 20px;">
+      <button class="ttt-btn" id="play-again-btn">Play Again</button>
+      <button class="ttt-btn" id="home-btn">Home</button>
+    </div>
+  </div>
+  
+  <script>
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  const resultMessage = getQueryParam('message') || "No result available.";
+  document.getElementById('result-message').textContent = resultMessage;
+
+  document.getElementById('play-again-btn').addEventListener('click', () => {
+    window.location.href = 'game.html';
+  });
+
+  document.getElementById('home-btn').addEventListener('click', () => {
+    window.location.href = '/';
+  });
+</script>
+
+</body>
+</html>
